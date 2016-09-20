@@ -1,0 +1,2 @@
+# form_validate
+使用jquery的插件validate进行表单验证练习
