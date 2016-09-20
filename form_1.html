@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>form validate</title>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+	<script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+	<script type="text/javascript">
+		$.validator.setDefaults({
+			submitHander: function() {
+				alert('提交事件！！！')
+			}
+		});
+		$(document).ready(function(){
+			$('#commentForm').validate();
+		})
+	</script>
+</head>
+<body>
+	<div class="container wrap-form">
+		<h1 class="text-center">表单验证</h1>
+		<form class="form-horizontal" id="commentForm" method="get" action="" role="form">
+			<div class="form-group">
+				<label for="cname" class="col-sm-2 control-label">Name: </label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" id="cname" name="name" minlength="2" placeholder="please input your name" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="cemail" class="col-sm-2 control-label">Email: </label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" id="cemail" name="email" placeholder="please input your email" required>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="curl" class="col-sm-2 control-label">URL: </label>
+				<div class="col-sm-10">
+					<input type="url" id="curl" name="url" class="form-control" placeholder="please input your url">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="ccomment" class="col-sm-2 control-label">备注: </label>
+				<div class="col-sm-10">
+					<textarea class="col-sm-10 form-control" id="ccomment" name="comment" required></textarea>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

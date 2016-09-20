@@ -1,0 +1,10 @@
+.wrap-form{
+	padding-top: 100px;
+}
+.wrap-form h1{
+	margin-bottom: 50px;
+}
+.error{
+	color: #a94442;
+	padding-top: 10px;
+}
